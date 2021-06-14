@@ -10,7 +10,6 @@ echo "Path"
 pwd
 git clone https://github.com/Bazhyk/1.git
 #Place for run tests
-#sleep 60m (optional, depends on test time) 
 aws s3 cp ./1/"EXAMPLE.LOG" s3://bazhyk777/
 
 
