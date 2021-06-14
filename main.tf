@@ -106,14 +106,6 @@ resource "aws_s3_bucket" "bazhyk777" {
 
  
 }
-#   resource "null_resource" "reboo_instance" {
-
-#   provisioner "local-exec" {
-#     command     = <<EOF
-#       scp -i ~/secret/aws_key_ohio.pem ec2-user@${aws_instance.webserver.public_ip}:/1/Install.sh > aws s3 cp - s3://${aws_s3_bucket.yurchin777.bucket}/Install.sh
-#      EOF
-#   }
-# }
 
   module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
