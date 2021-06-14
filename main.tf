@@ -99,11 +99,16 @@ resource "aws_s3_bucket" "bazhyk777" {
     Environment = "Dev"
 
   }
+resource "null_resource" "reboo_instance" {
+
   provisioner "local-exec" {
     command     = <<EOF
-      aws ec2 terminate-instances --instance-ids ${aws_instance.webserver.id}
+      aws ec2 stop-instances --instance-ids ${aws_instance.webserver.id}
      EOF
   }
+ timeouts {
+  create = "30s"
+ }
 }
  
 }
