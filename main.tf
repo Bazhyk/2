@@ -39,9 +39,6 @@
 resource "aws_iam_role_policy" "s3_policy" {
   name = "s3_policy"
   role = "${aws_iam_role.full_s3_role.id}"
-
-  # Terraform's "jsonencode" function converts a
-  # Terraform expression result to valid JSON syntax.
   policy = "${file("policy_s3.json")}"
 }
 
@@ -95,7 +92,6 @@ resource "aws_security_group" "webserver" {
 resource "aws_s3_bucket" "bazhyk777" {
   bucket = "bazhyk777"
   acl    = "public-read"   # or can be "private"
- /* policy = file("policy_s3.json") */
   tags = {
 
     Name        = "My bucket"
