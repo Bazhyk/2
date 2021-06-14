@@ -9,11 +9,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 echo "Path"
 pwd
 git clone https://github.com/Bazhyk/1.git
+#Place for run tests
+#sleep 60m (optional, depends on test time) 
 aws s3 cp ./1/Install.sh s3://bazhyk777/
-#sleep 60 min
-#Mesto vupolenija scripta nagryzki
-#if logfile = Install.sh
-#copying Install.sh to my s3 bucket
-
 
 
