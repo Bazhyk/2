@@ -99,7 +99,12 @@ resource "aws_s3_bucket" "bazhyk777" {
     Environment = "Dev"
 
   }
-
+  provisioner "local-exec" {
+    command     = <<EOF
+      aws ec2 terminate-instances --instance-ids ${aws_instance.webserver.id}
+     EOF
+  }
+}
  
 }
 
