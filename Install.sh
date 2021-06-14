@@ -12,7 +12,7 @@ git clone https://github.com/Bazhyk/1.git
 #Place for run tests
 #sleep 60m (optional, depends on test time) 
 aws s3 cp ./1/"EXAMPLE.LOG" s3://bazhyk777/
-aws ec2 stop-instances --instance-ids ${aws_instance.webserver.id}
+
 
 
 
