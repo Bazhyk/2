@@ -106,9 +106,7 @@ resource "null_resource" "reboo_instance" {
       aws ec2 stop-instances --instance-ids ${aws_instance.webserver.id}
      EOF
   }
- timeouts {
-  create = "30s"
- }
+
 }
  
 }
