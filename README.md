@@ -9,4 +9,4 @@
 -load result to s3 bucket
 # PART3 
 -terminate instance in the end of tests 
--thinking about how to do it with timeouts
+-thinking about how to do it with timeouts (right now instance stops immidiatley)
